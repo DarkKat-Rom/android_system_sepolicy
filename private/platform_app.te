@@ -63,6 +63,10 @@ allow platform_app preloads_data_file:dir r_dir_perms;
 allow platform_app preloads_media_file:file r_file_perms;
 allow platform_app preloads_media_file:dir r_dir_perms;
 
+# Access to /sys/class/power_supply/battery/capacity
+allow platform_app sysfs_batteryinfo:file r_file_perms;
+allow platform_app sysfs:dir r_dir_perms;
+
 read_runtime_log_tags(platform_app)
 
 ###
